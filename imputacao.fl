@@ -1,0 +1,20 @@
+// Batch code for UC( 1)
+module("STAMP");
+package("UCstamp");
+usedata("Petr4_new_com_buracos.xlsx");
+system
+{
+    Y = Petr4;
+}
+setcmp("level", 0, 0.217661, 0, 0);
+setcmp("irregular", 0, 0, 0, 0);
+setmodel();
+estimate("MAXSTAMP", 1998-08-18, 0, 2010-09-29, 0);
+
+store("components","irregular", "smo");
+store("components", "trend", "smo");
+
+algebra{
+petr4_sb=Level+Irregular;
+lpetr4=log(petr4_sb); 
+}
