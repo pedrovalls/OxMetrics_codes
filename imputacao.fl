@@ -1,4 +1,4 @@
-// Batch code for UC( 1)
+// Batch code for UC( 1) 
 module("STAMP");
 package("UCstamp");
 usedata("Petr4_new_com_buracos.xlsx");
@@ -10,7 +10,7 @@ setcmp("level", 0, 0.217661, 0, 0);
 setcmp("irregular", 0, 0, 0, 0);
 setmodel();
 estimate("MAXSTAMP", 1998-08-18, 0, 2010-09-29, 0);
-
+// store command work in version 8 but not in version 9
 store("components","irregular", "smo");
 store("components", "trend", "smo");
 
